@@ -309,7 +309,7 @@ class Post(db.Model):
     @staticmethod
     def from_json(json_post):
         body = json_post.get('body')
-        if body is None and body == '':
+        if body is None or body == '':
             raise ValidationError('post does not have a body')
         return Post(body=body)
 
@@ -340,6 +340,14 @@ class Comment(db.Model):
             'author': url_for('api.get_user', id=self.author_id, _external=True),
         }
         return json_comment
+
+    @staticmethod
+    def from_json(json_comment):
+        body = json_comment.get('body')
+        if body is None or body == '':
+            raise ValidationError('comment does not have a body')
+        return Comment(body=body)
+
 
 db.event.listen(Comment.body, 'set', Comment.on_changed_body)
 

@@ -14,9 +14,12 @@ def get_posts():
 	pagination = Post.query.paginate(page, per_page=current_app.config['FLASKY_POSTS_PER_PAGE'], error_out=False)
 	posts = pagination.items
 	prev = None
+	if pagination.has_prev:
+		prev = url_for('api.get_posts', page=page-1, _external=True)
+	next = None
 	if pagination.has_next:
 		next = url_for('api.get_posts', page=page+1, _external=True)
-		return jsonify({
+	return jsonify({
 			'posts': [post.to_json() for post in posts],
 			'prev': prev,
 			'next': next,
@@ -46,8 +49,10 @@ def new_post():
 @permission_required(Permission.WRITE_ARTICLES)
 def edit_post(id):
 	post = Post.query.get_or_404(id)
-	if f.current_user != post.author and not g.current_user.can(Permission.ADMINISTER):
+	if g.current_user != post.author and not g.current_user.can(Permission.ADMINISTER):
 		return forbidden('Insufficient permissions')
 	post.body = request.json.get('body', post.body)
 	db.session.add(post)
 	return jsonify(post.to_json())
+
+
