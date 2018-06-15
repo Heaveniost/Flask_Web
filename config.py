@@ -10,11 +10,11 @@ class Config:
 	MAIL_SERVER = 'smtp.qq.com'
 	MAIL_PORT = 587
 	MAIL_USE_TLS = True
-	MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
-	MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
+	MAIL_USERNAME = '304090717@qq.com' #os.environ.get('MAIL_USERNAME')
+	MAIL_PASSWORD = 'qq123456.' #os.environ.get('MAIL_PASSWORD')
 	FLASKY_MAIL_SUBJECT_PREFIX = '[Flasky]'
 	FLASKY_MAIL_SENDER = 'Flasky Admin <304090717@qq.com>'
-	FLASKY_ADMIN = os.environ.get('FLASKY_ADMIN')
+	FLASKY_ADMIN = '304090717@qq.com' #os.environ.get('FLASKY_ADMIN')
 	FLASKY_POSTS_PER_PAGE = 20
 	FLASKY_FOLLOWERS_PER_PAGE = 50
 	FLASKY_COMMENTS_PER_PAGE = 30
@@ -60,8 +60,8 @@ class ProductionConfig(Config):
 			credentials = credentials,
 			secure = secure
 			)
-	mail_handler.setLevel(logging.ERROR)
-	app.logger.addHandler(mail_handler)
+		mail_handler.setLevel(logging.ERROR)
+		app.logger.addHandler(mail_handler)
 
 
 config = {
