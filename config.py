@@ -15,6 +15,7 @@ class Config:
 	FLASKY_MAIL_SUBJECT_PREFIX = '[Flasky]'
 	FLASKY_MAIL_SENDER = 'Flasky Admin <304090717@qq.com>'
 	FLASKY_ADMIN = '304090717@qq.com' #os.environ.get('FLASKY_ADMIN')
+	SSL_REDIRECT = False
 	FLASKY_POSTS_PER_PAGE = 20
 	FLASKY_FOLLOWERS_PER_PAGE = 50
 	FLASKY_COMMENTS_PER_PAGE = 30
@@ -64,10 +65,30 @@ class ProductionConfig(Config):
 		app.logger.addHandler(mail_handler)
 
 
+class HerokuConfig(ProductionConfig):
+	SSL_REDIRECT = True if os.environ.get('DYNO') else False
+
+	@classmethod
+	def init_app(cls, app):
+		ProductionConfig.init_app(app)
+
+		# handle reverse proxy server headers
+		from werkzeug.contrib.fixers import ProxyFix
+		app.wsgi_app = ProxyFix(app.wsgi_app)
+
+		# log to stderr
+		import logging
+		from logging import StreamHandler
+		file_handler = StreamHandler()
+		file_handler.setLevel(logging.INFO)
+		app.logger.addHandler(file_handler)
+
+
 config = {
 	'development': DevelopmentConfig,
 	'testing': TestingConfig,
 	'production': ProductionConfig,
+	'heroku': HerokuConfig,
 
 	'default': DevelopmentConfig
 }
