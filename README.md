@@ -34,9 +34,8 @@ Flasky
 
 -----
 ### 6.16
-根据教程完成的web小应用 已成功部署到Heroku服务器上，可直接访问 **Website： https：//flask-web-01.herokuapp.com/**
-**注册用户需验证邮箱，如果嫌麻烦，可以使用账户 `276434920@qq.com` 密码 `123` 登陆体验** <br />
-Github：https：//git.heroku.com/flask-web-01.git <br />
+根据教程完成的web小应用 已成功部署到Heroku服务器上，可直接访问 [My Flask_web](https：//flask-web-01.herokuapp.com/) [Github](https：//git.heroku.com/flask-web-01.git) <br />
+注册用户需验证邮箱，如果嫌麻烦，可以使用账户 `276434920@qq.com` 密码 `123` 登陆体验 <br />
 通过这个教程 算是了解了一下利用Flask开发web application的流程<br /> 
 
 -----
@@ -91,12 +90,12 @@ Github：https：//git.heroku.com/flask-web-01.git <br />
 ### 6.8
 
 -----
-**Pro：**python manage.py runserver  提示：`ValueError： urls must start with a leading slash`
+**Pro：** python manage.py runserver  提示：`ValueError： urls must start with a leading slash`
 
 	Sol：路由注册时忘记加上'/‘ url_prefix='/auth'而不是'auth'
 
 -----
-**Pro：**启动程序后 报错  email = db.column(db.String(64), unique=True, index=True)  `TypeError： column() got an unexpected keyword argument 'unique'`
+**Pro：** 启动程序后 报错  email = db.column(db.String(64), unique=True, index=True)  `TypeError： column() got an unexpected keyword argument 'unique'`
 
 	Sol：不太清楚错误产生的原因 暂时先去掉了unique 和 index 两项
 	之后在 Python shell 中新建用户
@@ -107,7 +106,7 @@ Github：https：//git.heroku.com/flask-web-01.git <br />
 	一个小小的错误 可能就是几个小时的时间 仔细看看 column-->Column 还有这个逗号，也错了
 
 ----
-**Pro：**在Python shell中新建用户提示没有users这张表
+**Pro：** 在Python shell中新建用户提示没有users这张表
 
 	InvalidRequestError： This Session's trSolaction has been rolled back due to a previous exception during flush. To begin a new trSolaction with this Session, first issue Session.rollback(). Original exception was： (sqlite3.OperationalError) no such table： users [SQL： u'INSERT INTO users (username, role_id, password_hash) VALUES (?, ?, ?)'] [parameters： ('Heaven', None, 'pbkdf2：sha256：50000$1lXaaAUe$26d3996391b079f20df978dd6b944516df194115760d939ef2e55e1ea2f29977')] (Background on this error at： http：//sqlalche.me/e/e3q8)
 
@@ -119,7 +118,7 @@ Github：https：//git.heroku.com/flask-web-01.git <br />
 **从昨晚到现在 花了五六个小时 主要解决了两个错误 一是拼写引起的错误 二是没有创建数据库迁移脚本**<br />
 
 ---
-**Pro：**`使用 git status 时出现 Untracked files 和 Modified，这两种状态有什么区别`
+**Pro：** `使用 git status 时出现 Untracked files 和 Modified，这两种状态有什么区别`
 
 	Sol：Untracked files 有可能是新增的文件 之前没有记录 所以是未跟踪
 		 Modified 则是之前有记录的文件，做了修改
@@ -131,12 +130,12 @@ Github：https：//git.heroku.com/flask-web-01.git <br />
 **Tip：单元测试 python manage.py test 可以发现程序中的一些错误**
 
 ----
-**Pro：**创建迁移脚本时提示 py：69： `UserWarning： Skipping unsupported ALTER for creation of implicit constraint warnings.warn(msg)`
+**Pro：** 创建迁移脚本时提示 py：69： `UserWarning： Skipping unsupported ALTER for creation of implicit constraint warnings.warn(msg)`
 
 	Sol：中间不小心误删了一个迁移数据库（导致后面部署到服务器时还出现了问题）此时误删的文件没有补上 但数据库模型已成功创建
 
 -----
-**Pro：**运行程序 python manage.py runserver,提示
+**Pro：** 运行程序 python manage.py runserver,提示
 
 	raise SMTPAuthenticationError(code, resp)
 SMTPAuthenticationError： (535, 'Error：\xc7\xeb\xca\xb9\xd3\xc3\xca\xda\xc8\xa8\xc2\xeb\xb5\xc7\xc2\xbc\xa1\xa3\xcf\xea\xc7\xe9\xc7\xeb\xbf\xb4： http：//service.mail.qq.com/cgi-bin/help?subtype=1&&id=28&&no=1001256')
@@ -151,9 +150,9 @@ SMTPAuthenticationError： (535, 'Error：\xc7\xeb\xca\xb9\xd3\xc3\xca\xda\xc8\x
 ### 6.10
 
 ----
-**Pro：**发现作者在 修改密码 这一步没有验证新密码是否和原密码相同这个问题 自己加上了这部分代码 <br />
+**Pro：** 发现作者在 修改密码 这一步没有验证新密码是否和原密码相同这个问题 自己加上了这部分代码 <br />
 
-**Pro：**为什么有两个resetpassword表单
+**Pro：** 为什么有两个resetpassword表单
 
 -----
 **Pro：**单元测试 python manage.py test 报错 `BuildError： Could not build url for endpoint 'auth.password_reset, token=token, _external=True'. Did you mean 'auth.password_reset_request' instead?`
@@ -176,13 +175,13 @@ SMTPAuthenticationError： (535, 'Error：\xc7\xeb\xca\xb9\xd3\xc3\xca\xda\xc8\x
 **Pro：last_seen 上次登录时间 这个功能是怎么实现的**<br />
 
 -----
-**Pro：**运行程序报错 `AttributeError： 'SQLAlchemy' object has no attribute 'Datetime' `
+**Pro：** 运行程序报错 `AttributeError： 'SQLAlchemy' object has no attribute 'Datetime' `
 
 	Sol：Datetime --> DateTime
 
 -----
 
-**Pro：**添加了头像，但一直报错 `NameError： global name 'dafault' is not defined` 可能是拼错了？
+**Pro：** 添加了头像，但一直报错 `NameError： global name 'dafault' is not defined` 可能是拼错了？
 	python manage.py test 也报错  
 
 	Sol：将identicon 改成 retro 测试没问题了
@@ -198,12 +197,12 @@ SMTPAuthenticationError： (535, 'Error：\xc7\xeb\xca\xb9\xd3\xc3\xca\xda\xc8\x
 	定义这个块有什么作用啊
 
 -----
-**Pro：**`AttributeError： 'AnonymousUserMixin' object has no attribute 'can'`
+**Pro：** `AttributeError： 'AnonymousUserMixin' object has no attribute 'can'`
 
 	Sol：login_manager.anonymous_user = AnonymousUser 这句话漏掉了，新登录用户默认为匿名用户
 
 -----
-**Pro：**头像跟数据一直重叠在一起 无法正常显示 
+**Pro：** 头像跟数据一直重叠在一起 无法正常显示 
 
 	Sol：换个浏览器就好了  一直在检查 花了一两个小时 还是没检查出原因 后来搜索别人做这一部分，也遇到了这样的问题，给出了方案
 	通过搜索 
@@ -225,7 +224,7 @@ SMTPAuthenticationError： (535, 'Error：\xc7\xeb\xca\xb9\xd3\xc3\xca\xda\xc8\x
 **Pro：** main/ auth/ 为什么需要两个文件夹
 	
 -----
-**Pro：**生成虚拟用户和文章
+**Pro：** 生成虚拟用户和文章
 
 	User.generate_fake(100)
 	Post.generate_fake(100)
@@ -450,7 +449,7 @@ SMTPAuthenticationError： (535, 'Error：\xc7\xeb\xca\xb9\xd3\xc3\xca\xda\xc8\x
 **Sum：购买了一些工具，成功注册Heroku账号，此处不提**
 
 ---
-**Pro：**将实例代码推送到heroku上时,提示
+**Pro：** 将实例代码推送到heroku上时,提示
 
 	remote： -----> Installing python-3.6.5
 	remote： -----> Installing pip
@@ -464,7 +463,7 @@ SMTPAuthenticationError： (535, 'Error：\xc7\xeb\xca\xb9\xd3\xc3\xca\xda\xc8\x
 **Pro：**
 运行 pipenv install 报错： raise ValueError('unknown locale： %s' % localename) `ValueError： unknown locale： UTF-8`
 
-**Sol：**在 ~./bash_profile 加入
+**Sol：** 在 ~./bash_profile 加入
 
 	export LC_ALL=en_US.UTF-8
 	export LANG=en_US.UTF-8
@@ -472,7 +471,7 @@ SMTPAuthenticationError： (535, 'Error：\xc7\xeb\xca\xb9\xd3\xc3\xca\xda\xc8\x
 然后重新打开要运行 pipenv install这个命令的窗口 运行即可
 
 -----
-**Pro：**先下载 Postgres 安装 然后在命令行输入
+**Pro：** 先下载 Postgres 安装 然后在命令行输入
 
 	sudo mkdir -p /etc/paths.d && echo /Applications/Postgres.app/Contents/Versions/latest/bin | sudo tee /etc/paths.d/postgresapp
 
@@ -496,22 +495,22 @@ SMTPAuthenticationError： (535, 'Error：\xc7\xeb\xca\xb9\xd3\xc3\xca\xda\xc8\x
 	Created postgresql-concentric-49098 as DATABASE_URL 设置数据库链接
 
 -----
-**Pro：**git push heroku master 后创建的是python3.6 会有影响不 本地是2.7
-**Sol：**有影响，后面会提到
+**Pro：** git push heroku master 后创建的是python3.6 会有影响不 本地是2.7
+**Sol：** 有影响，后面会提到
 
 -----
-**Pro：**运行  heroku run python manage.py deploy 报错：
+**Pro：** 运行  heroku run python manage.py deploy 报错：
 
 	sqlalchemy.exc.OperationalError： (sqlite3.OperationalError) no such table： users
 	[SQL： 'ALTER TABLE users ADD COLUMN email VARCHAR(64)'] (Background on this error at： http：//sqlalche.me/e/e3q8)
 
-**Sol：**修改
+**Sol：** 修改
 
 	SQLALCHEMY_DATABASE_URI = os.environ.get('TEST_DATABASE_URL') or 'sqlite：///' + os.path.join(basedir,'data.sqlite')
 	---> 去掉TEST 把生产环境和测试环境的数据库设置成一样的了
 
 -----
-**Pro：**修改后继续部署 报错：
+**Pro：** 修改后继续部署 报错：
 
 	sqlalchemy.exc.ProgrammingError： (psycopg2.ProgrammingError) relation "users" does not exist
 	[SQL： 'ALTER TABLE users ADD COLUMN email VARCHAR(64)'] (Background on this error at： http：//sqlalche.me/e/f405)
@@ -531,7 +530,7 @@ SMTPAuthenticationError： (535, 'Error：\xc7\xeb\xca\xb9\xd3\xc3\xca\xda\xc8\x
 	把自己的原始 initial.py 这个文件删掉后一切正常  这个文件本来就是多余的 以为没什么影响就留着了 看来还是有影响
 
 ------
-**Pro：**启动服务后 一切正常 连接该目标网址时显示界面错误 查看日志 heroku logs 显示
+**Pro：** 启动服务后 一切正常 连接该目标网址时显示界面错误 查看日志 heroku logs 显示
 
 	__import__(module)
 	2018-06-16T05：17：56.401164+00：00 app[web.1]： ModuleNotFoundError： No module named 'flasky'
@@ -559,7 +558,7 @@ SMTPAuthenticationError： (535, 'Error：\xc7\xeb\xca\xb9\xd3\xc3\xca\xda\xc8\x
 
 
 ---
-Sum:
+**Sum：**
 
 	Procfile 修改了app
 	migrations 补上了前面误删的文件
