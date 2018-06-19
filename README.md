@@ -58,7 +58,10 @@ Flasky
 ### 6.7
 
 ----
-**Pro：** (venv) Mac：Flask_Web Heaven$ export FLASKY_ADMIN = <304090717@qq.com>  报错：`bash： syntax error near unexpected token 'newline' ` 脚本中有特殊字符？
+**Pro：** 
+
+	(venv) Mac：Flask_Web Heaven$ export FLASKY_ADMIN = <304090717@qq.com>  
+	报错：bash： syntax error near unexpected token 'newline'  脚本中有特殊字符？
 
 	Sol：去掉<> 将邮箱用''括起来
 
@@ -155,7 +158,7 @@ SMTPAuthenticationError： (535, 'Error：\xc7\xeb\xca\xb9\xd3\xc3\xca\xda\xc8\x
 **Pro：** 为什么有两个resetpassword表单
 
 -----
-**Pro：**单元测试 python manage.py test 报错 `BuildError： Could not build url for endpoint 'auth.password_reset, token=token, _external=True'. Did you mean 'auth.password_reset_request' instead?`
+**Pro：** 单元测试 python manage.py test 报错 `BuildError： Could not build url for endpoint 'auth.password_reset, token=token, _external=True'. Did you mean 'auth.password_reset_request' instead?`
 
 **Sol：找到源代码**
 
@@ -186,7 +189,7 @@ SMTPAuthenticationError： (535, 'Error：\xc7\xeb\xca\xb9\xd3\xc3\xca\xda\xc8\x
 
 	Sol：将identicon 改成 retro 测试没问题了
 	再改回来 几个头像都能正常显示 除了blank
-`虽然默认值一样 但不同邮箱的头像是不一样的`
+	虽然默认值一样 但不同邮箱的头像是不一样的
 
 -----
 **Pro：**
@@ -440,7 +443,7 @@ SMTPAuthenticationError： (535, 'Error：\xc7\xeb\xca\xb9\xd3\xc3\xca\xda\xc8\x
 	可以使用 a.f()来调用 也可 a().f() 
 
 ---
-**Tip：在 heroku.com 注册账号验证码一直不出来 需要翻墙 才能刷新验证码  邮箱最好用gmail**  [单击这里](https：//blog.csdn.net/while10/article/details/79053563)
+**Tip：在 heroku.com 注册账号验证码一直不出来 需要翻墙 才能刷新验证码  邮箱最好用gmail**  
 
 -----
 ### 6.15/6.16
