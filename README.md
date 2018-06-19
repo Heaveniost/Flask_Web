@@ -2,60 +2,57 @@ Flasky
 ==========
 This repository contains the source code learning from Flask Web Development.
 
-第一部分  Flask简介
+##第一部分  Flask简介
 
-第一章：安装
-第二章：程序的基本结构
-第三章：模板
-第四章：Web表单
-第五章：数据库
-第六章：电子邮件
-第七章：大型程序的结构
-
-
-第二部分  实例：社交博客程序
-
-第八章：用户认证
-第九章：用户角色
-第十章：用户资料
-第十一章：博客文章
-第十二章：关注者
-第十三章：用户评论
-第十四章：应用编程接口
+###第一章：安装
+###第二章：程序的基本结构
+###第三章：模板
+###第四章：Web表单
+###第五章：数据库
+###第六章：电子邮件
+###第七章：大型程序的结构
 
 
-第三部分  成功在望
+##第二部分  实例：社交博客程序
 
-第十五章：测试
-第十六章：性能
-第十七章：部署
-第十八章：简介
-==========
+###第八章：用户认证
+###第九章：用户角色
+###第十章：用户资料
+###第十一章：博客文章
+###第十二章：关注者
+###第十三章：用户评论
+###第十四章：应用编程接口
 
-写在前面：
-6.16
-按照作者的代码 已成功部署到Heroku服务器上，可直接访问 
-Website: https://flask-web-01.herokuapp.com/  
-   //欢迎访问此网站，注册用户需验证邮箱，如果嫌麻烦，可以使用账户 276434920@qq.com 密码 123 登陆体验
-Github:  https://git.heroku.com/flask-web-01.git
 
-算是了解了一下利用Flask开发web application的流程 
+##第三部分  成功在望
 
-6.19
-前两天端午，自己也偷偷休息了下，没做什么有效的工作
-今天将笔记整理了下，上传到GitHub，网站肯定需要润色，但接下来准备找工作，所以可能需要对之前所学的知识点做个总结，再刷一些面试题，之后等工作落定后再修改网站，添加一些新的功能
+###第十五章：测试
+###第十六章：性能
+###第十七章：部署
+###第十八章：简介
 
-单词缩写
+##写在前面：
+###6.16
+	按照作者的代码 已成功部署到Heroku服务器上，可直接访问 
+	Website: https://flask-web-01.herokuapp.com/  
+		//欢迎访问此网站，注册用户需验证邮箱，如果嫌麻烦，可以使用账户 276434920@qq.com 密码 123 登陆体验
+	Github:  https://git.heroku.com/flask-web-01.git
+	算是了解了一下利用Flask开发web application的流程 
+
+###6.19
+	前两天端午，自己也偷偷休息了下，没做什么有效的工作
+	今天将笔记整理了下，上传到GitHub，网站肯定需要润色，但接下来准备找工作，所以可能需要对之前所学的知识点做个总结，再刷一些面试题，之后等工作落定后再修改网站，添加一些新的功能
+
+###单词缩写
 	Pro：Problem
 	Ans：Answer
 	Sum：Summary
 	Ps：Postscript
 	Rs：Reference source
-==========
 
-每日记录：
+##每日记录：
 
-6.7
+#6.7
 (venv) Mac:Flask_Web Heaven$ export FLASKY_ADMIN = <304090717@qq.com>
 报错：-bash: syntax error near unexpected token 'newline' 脚本中有特殊字符？去掉<>
 https://stackoverflow.com/questions/5134399/bash-syntax-error-near-unexpected-token-newline/
