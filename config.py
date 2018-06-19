@@ -10,11 +10,11 @@ class Config:
 	MAIL_SERVER = 'smtp.qq.com'
 	MAIL_PORT = 587
 	MAIL_USE_TLS = True
-	MAIL_USERNAME = '304090717@qq.com' #os.environ.get('MAIL_USERNAME')
-	MAIL_PASSWORD = 'qq123456.' #os.environ.get('MAIL_PASSWORD')
+	MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
+	MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
 	FLASKY_MAIL_SUBJECT_PREFIX = '[Flasky]'
 	FLASKY_MAIL_SENDER = 'Flasky Admin <304090717@qq.com>'
-	FLASKY_ADMIN = '304090717@qq.com' #os.environ.get('FLASKY_ADMIN')
+	FLASKY_ADMIN = os.environ.get('FLASKY_ADMIN')
 	SSL_REDIRECT = False
 	FLASKY_POSTS_PER_PAGE = 20
 	FLASKY_FOLLOWERS_PER_PAGE = 50
@@ -38,7 +38,7 @@ class TestingConfig(Config):
 
 
 class ProductionConfig(Config):
-	SQLALCHEMY_DATABASE_URI = os.environ.get('TEST_DATABASE_URL') or 'sqlite:///' + os.path.join(basedir,'data.sqlite')
+	SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or 'sqlite:///' + os.path.join(basedir,'data.sqlite')
 
 	@classmethod
 	def init_app(cls, app):
