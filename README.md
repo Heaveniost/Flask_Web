@@ -34,7 +34,7 @@ Flasky
 
 -----
 ### 6.16
-根据教程完成的web小应用 已成功部署到Heroku服务器上，可直接访问 [My Flask_web](https：//flask-web-01.herokuapp.com/) [Github](https：//git.heroku.com/flask-web-01.git) <br />
+根据教程完成的web小应用 已成功部署到Heroku服务器上，可直接访问 [My Flask_web](https://flask-web-01.herokuapp.com/)<br />
 注册用户需验证邮箱，如果嫌麻烦，可以使用账户 `276434920@qq.com` 密码 `123` 登陆体验 <br />
 通过这个教程 算是了解了一下利用Flask开发web application的流程<br /> 
 
@@ -66,7 +66,7 @@ Flasky
 	Sol：去掉<> 将邮箱用''括起来
 
 -----
-**[Mac中的环境变量](https：//blog.csdn.net/waneto2008/article/details/52486433)**
+**[Mac中的环境变量](https://blog.csdn.net/waneto2008/article/details/52486433)**
 
 	Tip：Mac 系统，如果只在终端使用 export 这个命令写入环境变量，它配置的只是临时变量，不能长期保存，电脑开关机后或重新打开终端或另开一个窗口，仍然会回到没有配置环境变量的状态。
 
@@ -77,7 +77,7 @@ Flasky
 	查看变量：echo $MAIL_USERNAME 
 
 ----
-**[flask-mail的邮箱配置问题](https：//blog.csdn.net/lagelangzhi/article/details/51717433)**
+**[flask-mail的邮箱配置问题](https://blog.csdn.net/lagelangzhi/article/details/51717433)**
 
 	配置邮箱发送邮件需要去设置里开启邮箱的SMTP服务，并通过短信获取服务提供商的发送的密码，此处使用了QQ邮箱
 	新密码：`ahvtapoodpuscafb` （不再是QQ原始密码）（Ps：此密码已修改，最新密码保存在本地主机中）
@@ -237,7 +237,7 @@ SMTPAuthenticationError： (535, 'Error：\xc7\xeb\xca\xb9\xd3\xc3\xca\xda\xc8\x
 
 **Sol：**
 
-	登陆提供的网站 at： http：//sqlalche.me/e/e3q8 查找原因
+	登陆提供的网站 at： http://sqlalche.me/e/e3q8 查找原因
 
 	查到函数
     @staticmethod
@@ -505,7 +505,7 @@ SMTPAuthenticationError： (535, 'Error：\xc7\xeb\xca\xb9\xd3\xc3\xca\xda\xc8\x
 **Pro：** 运行  heroku run python manage.py deploy 报错：
 
 	sqlalchemy.exc.OperationalError： (sqlite3.OperationalError) no such table： users
-	[SQL： 'ALTER TABLE users ADD COLUMN email VARCHAR(64)'] (Background on this error at： http：//sqlalche.me/e/e3q8)
+	[SQL： 'ALTER TABLE users ADD COLUMN email VARCHAR(64)'] (Background on this error at： http://sqlalche.me/e/e3q8)
 
 **Sol：** 修改
 
@@ -557,7 +557,7 @@ SMTPAuthenticationError： (535, 'Error：\xc7\xeb\xca\xb9\xd3\xc3\xca\xda\xc8\x
 
 	UserWarning： The psycopg2 wheel package will be renamed from release 2.8;  Ps：改成2.8后还报错 没有这个版本 改回2.7.4 忽略此条语句
 
-不停地修改 测试 查看日志 没解决问题 后换个关键词搜索 用 worker-failed-to-boot搜索 发现一篇[文章](https：//stackoverflow.com/questions/24488891/gunicorn-errors-haltserver-haltserver-worker-failed-to-boot-3-django)比较契合  打开自己的Procfile 显示 web： gunicorn flasky：app  `将flasky改成manage` 问题解决
+不停地修改 测试 查看日志 没解决问题 后换个关键词搜索 用 worker-failed-to-boot搜索 发现一篇[文章](https://stackoverflow.com/questions/24488891/gunicorn-errors-haltserver-haltserver-worker-failed-to-boot-3-django)比较契合  打开自己的Procfile 显示 web： gunicorn flasky：app  `将flasky改成manage` 问题解决
 
 
 ---
@@ -575,8 +575,8 @@ SMTPAuthenticationError： (535, 'Error：\xc7\xeb\xca\xb9\xd3\xc3\xca\xda\xc8\x
 ----
 #### 一些网站
 
-[部署学习网站1](https：//devcenter.heroku.com/articles/getting-started-with-python#view-logs)<br />
-[部署学习网站2](https：//devcenter.heroku.com/articles/heroku-postgresql#local-setup)<br />
-[pipenv的介绍](https：//www.jiSolhu.com/p/00af447f0005)<br />
+[部署学习网站1](https://devcenter.heroku.com/articles/getting-started-with-python#view-logs)<br />
+[部署学习网站2](https://devcenter.heroku.com/articles/heroku-postgresql#local-setup)<br />
+[pipenv的介绍](https://www.jiSolhu.com/p/00af447f0005)<br />
 
 
