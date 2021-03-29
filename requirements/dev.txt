@@ -1,6 +1,6 @@
 -r common.txt
 ForgeryPy==0.1
-Pygments==2.2.0
+Pygments==2.7.4
 httpie==0.9.9
 requests==2.19.0
 certifi==2018.4.16 
